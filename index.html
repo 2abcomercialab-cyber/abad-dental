@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clínica Dental ABAD Burgos — Más de 30 años cuidando tu salud dental en Burgos. Implantología, Estética dental, Odontopediatría. C/ Vitoria 235, Burgos. Tel: 947 48 21 71">
+<meta name="keywords" content="dentista Burgos, implantes dentales Burgos, clínica dental Burgos, dentista niños Burgos">
+<title>Clínica Dental ABAD — Tu dentista de confianza en Burgos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursorDot"><div class="cursor-dot"></div></div>
+<div class="cursor" id="cursorRing"><div class="cursor-ring"></div></div>
+
+<!-- SCROLL PROGRESS -->
+<div id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">ABAD</a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#tecnologia">Tecnología</a></li>
+    <li><a href="#confianza">La Clínica</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contacto" class="nav-cta">Pedir cita</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><div class="hero-tag-line"></div>Clínica Dental · Burgos · Desde 1993<div class="hero-tag-line"></div></div>
+    <h1 class="hero-logo">ABAD</h1>
+    <p class="hero-sub">Odontología de precisión</p>
+    <p class="hero-tagline">Más de 30 años cuidando tu salud dental en Burgos</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-hero-primary">Pedir cita</a>
+      <a href="#servicios" class="btn-hero-ghost">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Ver servicios
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+  <div class="hero-badges">
+    <div class="hero-badge"><strong>+30</strong>años de experiencia</div>
+    <div class="hero-badge"><strong>+20.000</strong>pacientes atendidos</div>
+  </div>
+</section>
+
+<!-- FRANJA -->
+<div class="franja-azul">
+  <div class="franja-track">
+    Implantología <span>·</span> Estética Dental <span>·</span> Odontopediatría <span>·</span> Endodoncia <span>·</span> Radiología Digital <span>·</span> Urgencias <span>·</span> Blanqueamiento <span>·</span>
+    Implantología <span>·</span> Estética Dental <span>·</span> Odontopediatría <span>·</span> Endodoncia <span>·</span> Radiología Digital <span>·</span> Urgencias <span>·</span> Blanqueamiento <span>·</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="container">
+    <div class="servicios-intro">
+      <div>
+        <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Nuestros tratamientos</span></div>
+        <h2 class="section-title reveal">Todo lo que <em>necesitas</em><br>en un solo lugar</h2>
+      </div>
+      <p class="servicios-intro-text reveal">Ofrecemos una odontología integral, personalizada y de alta precisión. Cada tratamiento está diseñado para ti, con la tecnología más avanzada y el cuidado que mereces.</p>
+    </div>
+    <div class="servicios-grid">
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">01</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><path d="M12 2c-2.5 0-4 2-4 4.5 0 1.5.5 2.8 1.5 3.8L10 19h4l.5-8.7C15.5 9.3 16 8 16 6.5 16 4 14.5 2 12 2z"/><ellipse cx="12" cy="6" rx="2" ry="1.5"/></svg></div>
+        <div class="servicio-nombre">Implantología</div>
+        <div class="servicio-desc">Recupera tu sonrisa completa con implantes de titanio. Soluciones permanentes y de aspecto natural.</div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">02</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><path d="M12 3c-2.5 0-5 2-5 5 0 2 1 3.8 2.8 5L10 20h4l.2-7c1.8-1.2 2.8-3 2.8-5 0-3-2.5-5-5-5z"/><path d="M9.5 9.5Q12 12 14.5 9.5M10 12.5Q12 14.5 14 12.5"/></svg></div>
+        <div class="servicio-nombre">Estética Dental</div>
+        <div class="servicio-desc">Diseño de sonrisa, carillas de porcelana y coronas de zirconio para una apariencia impecable.</div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">03</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M7 21v-1c0-2.8 2.2-5 5-5s5 2.2 5 5v1"/><path d="M4 14c0-1.7 1.3-3 3-3"/><path d="M20 14c0-1.7-1.3-3-3-3"/></svg></div>
+        <div class="servicio-nombre">Odontopediatría</div>
+        <div class="servicio-desc">Cuidamos la salud bucodental de los más pequeños con un trato cercano y especializado.</div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">04</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><path d="M12 2c-2.5 0-4.5 2-4.5 4.8 0 1.8.8 3.3 2 4.3L10 20h4l.5-8.9C15.7 10.1 16.5 8.6 16.5 6.8 16.5 4 14.5 2 12 2z"/><path d="M10 10l1.5 2 3-4.5"/></svg></div>
+        <div class="servicio-nombre">Endodoncia</div>
+        <div class="servicio-desc">Salvamos tus dientes naturales con técnicas de alta precisión y mínima molestia.</div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">05</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="9" cy="10.5" r="2"/><path d="M13 9h5M13 12h4"/></svg></div>
+        <div class="servicio-nombre">Radiología Digital</div>
+        <div class="servicio-desc">XMIND Prime: diagnóstico de máxima precisión con la mínima dosis de radiación.</div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">06</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><path d="M12 2c-2.5 0-4.5 2-4.5 4.8 0 1.8.8 3.3 2 4.3L10 20h4l.5-8.9C15.7 10.1 16.5 8.6 16.5 6.8 16.5 4 14.5 2 12 2z"/><path d="M8.5 12l1.5 1.5 1.5-3"/><circle cx="18" cy="6" r="3"/><path d="M18 4v2l1 1"/></svg></div>
+        <div class="servicio-nombre">Urgencias Dentales</div>
+        <div class="servicio-desc">Cita el mismo día siempre que sea posible. Llámanos y te atendemos.</div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-card-bg"></div>
+        <div class="servicio-num">07</div>
+        <div class="servicio-icon"><svg viewBox="0 0 24 24"><path d="M12 2c-2.5 0-4.5 2-4.5 4.8 0 1.8.8 3.3 2 4.3L10 20h4l.5-8.9C15.7 10.1 16.5 8.6 16.5 6.8 16.5 4 14.5 2 12 2z"/><path d="M9 7c1 1.5 2 1.5 3 0s2-.5 3 0"/><path d="M9.5 10c1 1 2 1 3 0s1.5-.8 2.5 0"/></svg></div>
+        <div class="servicio-nombre">Blanqueamiento</div>
+        <div class="servicio-desc">Recupera el blanco natural de tus dientes de forma segura y supervisada.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo">
+  <div class="container">
+    <div class="equipo-layout">
+      <div class="equipo-intro reveal-left">
+        <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Nuestro equipo</span></div>
+        <h2 class="section-title">Más de 30 años<br><em>al servicio</em><br>de Burgos</h2>
+        <p class="historia-texto">Desde 1993, la Clínica Dental ABAD es un referente de la salud bucodental en Burgos. Tres especialistas comprometidos con la atención más personalizada, cercana y de alta calidad técnica.</p>
+      </div>
+      <div class="equipo-grid">
+        <div class="doctor-card reveal">
+          <div class="doctor-img-wrap">
+            <img class="doctor-foto" src="/images/doctor-jose.png" alt="Dr. José Antonio Abad Castell">
+            <div class="doctor-overlay"><div class="doctor-overlay-text">Fundador · Odontología General</div></div>
+          </div>
+          <div class="doctor-linea"></div>
+          <div class="doctor-nombre">Dr. José Antonio Abad Castell</div>
+          <div class="doctor-titulo">Fundador · Odontología General</div>
+        </div>
+        <div class="doctor-card reveal">
+          <div class="doctor-img-wrap">
+            <img class="doctor-foto" src="/images/doctor-ivan.png" alt="Dr. Iván Arnáiz Abad">
+            <div class="doctor-overlay"><div class="doctor-overlay-text">Implantología · Invisalign · Zirconio</div></div>
+          </div>
+          <div class="doctor-linea"></div>
+          <div class="doctor-nombre">Dr. Iván Arnáiz Abad</div>
+          <div class="doctor-titulo">Implantología · Invisalign · Zirconio</div>
+        </div>
+        <div class="doctor-card reveal">
+          <div class="doctor-img-wrap">
+            <img class="doctor-foto" src="/images/doctor-maria.png" alt="Dra. María Abad">
+            <div class="doctor-overlay"><div class="doctor-overlay-text">Odontopediatría</div></div>
+          </div>
+          <div class="doctor-linea"></div>
+          <div class="doctor-nombre">Dra. María Abad</div>
+          <div class="doctor-titulo">Odontopediatría</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECNOLOGÍA -->
+<section id="tecnologia">
+  <div class="tech-grid">
+    <div class="tech-carousel" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide active">
+          <img src="/images/carousel-recepcion.png" alt="Recepción Clínica Dental ABAD">
+          <div class="carousel-slide-label">Recepción</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="/images/carousel-sala-espera.png" alt="Sala de espera">
+          <div class="carousel-slide-label">Sala de espera</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="/images/carousel-pasillo.png" alt="Pasillo interior">
+          <div class="carousel-slide-label">Instalaciones</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="/images/carousel-xmind.png" alt="XMIND Prime">
+          <div class="carousel-slide-label">Radiología XMIND Prime</div>
+        </div>
+      </div>
+      <div class="carousel-progress" id="carouselProgress"></div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="carouselMove(-1)">&#8592;</button>
+        <button class="carousel-btn" onclick="carouselMove(1)">&#8594;</button>
+      </div>
+    </div>
+    <div class="tech-contenido reveal-right">
+      <div class="section-eyebrow"><div class="eyebrow-line" style="background:rgba(255,255,255,0.3)"></div><span class="eyebrow-text" style="color:rgba(255,255,255,0.4)">Tecnología avanzada</span></div>
+      <h2 class="section-title" style="color:var(--blanco)">Diagnóstico de<br><em>precisión</em></h2>
+      <div class="tech-items">
+        <div class="tech-item">
+          <span class="tech-num">01</span>
+          <div class="tech-item-texto"><h4>XMIND Prime — Radiología Digital</h4><p>Equipo de última generación con imágenes de altísima resolución y la mínima dosis de radiación posible para el paciente.</p></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-num">02</span>
+          <div class="tech-item-texto"><h4>Equipamiento de vanguardia</h4><p>Todos nuestros gabinetes con tecnología de última generación para tratamientos precisos, cómodos y seguros.</p></div>
+        </div>
+        <div class="tech-item">
+          <span class="tech-num">03</span>
+          <div class="tech-item-texto"><h4>Diagnóstico rápido y preciso</h4><p>La tecnología digital nos permite resultados más rápidos, reduciendo tiempos de espera y mejorando los resultados clínicos.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANZA -->
+<section id="confianza">
+  <div class="container">
+    <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Por qué elegirnos</span></div>
+    <h2 class="section-title reveal">Tres décadas de<br><em>confianza</em> en Burgos</h2>
+    <div class="cifras-grid">
+      <div class="cifra-item reveal"><div class="cifra-num" data-target="30" data-prefix="+">0</div><div class="cifra-label">Años de experiencia</div></div>
+      <div class="cifra-item reveal"><div class="cifra-num" data-target="3" data-prefix="+">0</div><div class="cifra-label">Especialistas</div></div>
+      <div class="cifra-item reveal"><div class="cifra-num" data-target="20000" data-prefix="+">0</div><div class="cifra-label">Pacientes atendidos</div></div>
+      <div class="cifra-item reveal"><div class="cifra-num">1993</div><div class="cifra-label">Fundación en Burgos</div></div>
+    </div>
+    <div class="resenas-wrap">
+      <div class="resenas-header reveal">
+        <h3 class="resenas-titulo">Lo que dicen nuestros pacientes</h3>
+        <div class="resenas-google"><span class="stars">★★★★★</span> 5.0 · Google Reviews</div>
+      </div>
+      <div class="resenas-grid">
+        <div class="resena-card reveal">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto">Llevo más de 20 años yendo con esta familia de dentistas. Me encantan, muy profesionales tod@s.</p>
+          <div class="resena-footer"><div class="resena-avatar">JG</div><div class="resena-autor">Javier Gálvez</div></div>
+        </div>
+        <div class="resena-card reveal">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto">El mejor dentista se llama José Antonio. Tengo un miedo especial y encontrar a alguien que te hace sentir tan bien en un momento difícil es de valorar. Un tipazo.</p>
+          <div class="resena-footer"><div class="resena-avatar">PG</div><div class="resena-autor">Palhima González</div></div>
+        </div>
+        <div class="resena-card reveal">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-texto">Profesionales de 10, encantada. Están cuando les necesitas. Mi clínica dental de toda la vida.</p>
+          <div class="resena-footer"><div class="resena-avatar">MM</div><div class="resena-autor">Marian Manrique</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Preguntas frecuentes</span></div>
+    <h2 class="section-title reveal">Resolvemos tus<br><em>dudas</em></h2>
+    <div class="faq-grid">
+      <div class="faq-item reveal" onclick="toggleFaq(this)">
+        <div class="faq-question">¿Cuánto tiempo dura un implante dental?<div class="faq-icon"></div></div>
+        <div class="faq-answer">Los implantes dentales, con el cuidado adecuado, tienen una duración indefinida. Realizamos revisiones periódicas para garantizar su correcto mantenimiento y longevidad.</div>
+      </div>
+      <div class="faq-item reveal" onclick="toggleFaq(this)">
+        <div class="faq-question">¿Atienden urgencias el mismo día?<div class="faq-icon"></div></div>
+        <div class="faq-answer">Sí. Hacemos todo lo posible por atender las urgencias el mismo día. Llámanos al 947 48 21 71 y te daremos la cita lo antes posible.</div>
+      </div>
+      <div class="faq-item reveal" onclick="toggleFaq(this)">
+        <div class="faq-question">¿A partir de qué edad pueden venir los niños?<div class="faq-icon"></div></div>
+        <div class="faq-answer">Recomendamos la primera visita a partir de los 2-3 años, cuando comienzan a salir los dientes de leche. Nuestra odontopediatra Dra. María Abad cuenta con formación específica para los más pequeños.</div>
+      </div>
+      <div class="faq-item reveal" onclick="toggleFaq(this)">
+        <div class="faq-question">¿Ofrecéis financiación para los tratamientos?<div class="faq-icon"></div></div>
+        <div class="faq-answer">Sí, ofrecemos facilidades de pago y financiación sin intereses para los principales tratamientos. Consúltanos en la primera visita y te informamos sin compromiso.</div>
+      </div>
+      <div class="faq-item reveal" onclick="toggleFaq(this)">
+        <div class="faq-question">¿Qué es el XMIND Prime y por qué es importante?<div class="faq-icon"></div></div>
+        <div class="faq-answer">Es nuestro equipo de radiología digital de última generación. Permite obtener imágenes panorámicas y en 3D con una dosis de radiación mínima, lo que mejora la precisión del diagnóstico y la seguridad del paciente.</div>
+      </div>
+      <div class="faq-item reveal" onclick="toggleFaq(this)">
+        <div class="faq-question">¿Cuánto dura el tratamiento de Invisalign?<div class="faq-icon"></div></div>
+        <div class="faq-answer">La duración varía según cada caso, pero generalmente oscila entre 6 y 18 meses. En la primera consulta con el Dr. Iván Arnáiz realizamos un estudio personalizado y te damos un plan de tratamiento detallado.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
+    <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Contacto</span></div>
+    <h2 class="section-title reveal">Pide tu cita<br><em>hoy mismo</em></h2>
+    <div class="contacto-grid">
+      <div class="reveal-left">
+        <div class="contacto-map-wrap" onclick="window.open('https://maps.google.com/?q=Clínica+Dental+ABAD+C/Vitoria+235+Burgos','_blank')">
+          <div style="text-align:center"><div class="contacto-map-icon">📍</div><div class="contacto-map-label">Ver en Google Maps</div></div>
+        </div>
+        <div class="contacto-datos">
+          <div class="contacto-dato">
+            <div class="contacto-dato-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <div class="contacto-dato-info"><span class="contacto-dato-label">Dirección</span><span class="contacto-dato-valor">C/ Vitoria 235, 09007 Burgos</span></div>
+          </div>
+          <div class="contacto-dato">
+            <div class="contacto-dato-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.8 19.79 19.79 0 01.86 2.18 2 2 0 012.84.02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg></div>
+            <div class="contacto-dato-info"><span class="contacto-dato-label">Teléfono</span><span class="contacto-dato-valor"><a href="tel:+34947482171">947 48 21 71</a></span></div>
+          </div>
+          <div class="contacto-dato">
+            <div class="contacto-dato-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="contacto-dato-info"><span class="contacto-dato-label">Email</span><span class="contacto-dato-valor"><a href="mailto:abadclinicadental@gmail.com">abadclinicadental@gmail.com</a></span></div>
+          </div>
+          <div class="contacto-dato">
+            <div class="contacto-dato-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="contacto-dato-info"><span class="contacto-dato-label">Horario</span><span class="contacto-dato-valor">Lun–Vie: 9:00–14:00 · 16:30–19:30</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <p class="form-titulo">Solicitar cita</p>
+        <form id="citaForm">
+          <div class="form-row">
+            <div class="form-field"><label>Nombre</label><input type="text" placeholder="Tu nombre" required></div>
+            <div class="form-field"><label>Teléfono</label><input type="tel" placeholder="600 000 000" required></div>
+          </div>
+          <div class="form-field">
+            <label>Tratamiento de interés</label>
+            <select>
+              <option value="">Selecciona un tratamiento</option>
+              <option>Implantología</option>
+              <option>Estética Dental</option>
+              <option>Odontopediatría</option>
+              <option>Endodoncia</option>
+              <option>Radiología Digital</option>
+              <option>Urgencia dental</option>
+              <option>Blanqueamiento</option>
+              <option>Otro / Primera consulta</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Mensaje (opcional)</label><textarea placeholder="¿En qué podemos ayudarte?"></textarea></div>
+          <span class="form-aviso">Te llamaremos para confirmar la cita en horario de apertura</span>
+          <button type="submit" class="btn-form">
+            Solicitar cita
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <span class="tel-directo">O llámanos directamente al <a href="tel:+34947482171">947 48 21 71</a></span>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">ABAD</div>
+      <p class="footer-tagline">Clínica Dental ABAD · Más de 30 años<br>cuidando tu salud dental en Burgos.</p>
+      <div class="footer-contact-mini">
+        <a href="tel:+34947482171">947 48 21 71</a>
+        <a href="mailto:abadclinicadental@gmail.com">abadclinicadental@gmail.com</a>
+        <a href="#">C/ Vitoria 235 · 09007 Burgos</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#servicios">Implantología</a></li>
+        <li><a href="#servicios">Estética Dental</a></li>
+        <li><a href="#servicios">Odontopediatría</a></li>
+        <li><a href="#servicios">Endodoncia</a></li>
+        <li><a href="#servicios">Radiología Digital</a></li>
+        <li><a href="#servicios">Urgencias</a></li>
+        <li><a href="#servicios">Blanqueamiento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Clínica</h5>
+      <ul>
+        <li><a href="#equipo">Nuestro equipo</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#confianza">Reseñas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Horario</h5>
+      <ul>
+        <li><a href="#">Lun – Vie</a></li>
+        <li><a href="#">9:00 – 14:00</a></li>
+        <li><a href="#">16:30 – 19:30</a></li>
+        <li><a href="#contacto" style="margin-top:.5rem;color:var(--azul)!important">Pedir cita →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Clínica Dental ABAD · Burgos</span>
+    <span>Aviso legal · Política de privacidad</span>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
