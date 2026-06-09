@@ -18,7 +18,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); color: var(--texto); background: var(--blanco); overflow-x: hidden; cursor: none; }
+body { font-family: var(--font-body); color: var(--texto); background: var(--blanco); overflow-x: hidden; cursor: none; font-size: 17px; }
 
 /* ── CURSOR PERSONALIZADO ── */
 .cursor { position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
@@ -416,4 +416,173 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
   .hero-badges { display: none; }
   body { cursor: auto; }
   .cursor { display: none; }
+}
+
+
+/* ═══════════════════════════════════════
+   TRATAMIENTOS v7 — Coverflow semicircular
+   ═══════════════════════════════════════ */
+
+#servicios {
+  padding: 0;
+  background: var(--blanco);
+  overflow: hidden;
+}
+.servicios-layout { display: flex; flex-direction: column; }
+.servicios-header {
+  padding: 7rem 5rem 4rem;
+  max-width: 1240px; margin: 0 auto; width: 100%;
+}
+.servicios-header .servicios-intro-text {
+  max-width: 560px; font-size: 1.05rem;
+  color: var(--texto-mid); line-height: 1.9;
+  font-weight: 300; margin-top: 0.5rem;
+}
+
+.servicios-coverflow {
+  position: relative;
+  background: #02548e;
+  padding: 5rem 0 5rem;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.servicios-arrow {
+  position: absolute; top: 50%;
+  transform: translateY(-50%);
+  z-index: 20; width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.12);
+  color: var(--blanco); font-size: 1.3rem;
+  cursor: pointer; transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.servicios-arrow:hover {
+  background: var(--blanco); color: var(--azul); border-color: var(--blanco);
+}
+.servicios-arrow-left { left: 2rem; }
+.servicios-arrow-right { right: 2rem; }
+
+.servicios-stage {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+}
+
+/* TARJETA — flip real con preserve-3d */
+.trat-card {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.76,0,0.24,1),
+              opacity 0.65s cubic-bezier(0.76,0,0.24,1),
+              filter 0.65s cubic-bezier(0.76,0,0.24,1);
+}
+
+.trat-card-front,
+.trat-card-back {
+  position: absolute; inset: 0;
+  border-radius: 14px;
+  box-shadow: 0 12px 50px rgba(0,0,0,0.25);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.trat-card-front {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1.5rem; padding: 2.5rem 2rem;
+  background: var(--marfil);
+}
+
+.trat-card-icon {
+  width: 90px; height: 90px;
+  display: flex; align-items: center; justify-content: center;
+}
+.trat-card-icon svg { width: 90px; height: 90px; }
+
+.trat-card-nombre {
+  font-family: var(--font-display);
+  font-size: 1.6rem; font-weight: 400;
+  color: var(--texto); text-align: center; line-height: 1.2;
+}
+.trat-card-hint {
+  font-size: 0.8rem; color: var(--texto-suave);
+  font-weight: 300; text-align: center;
+}
+
+/* BACK — girado 180deg en Y por defecto */
+.trat-card-back {
+  display: flex; flex-direction: column;
+  padding: 2.2rem 2rem;
+  background: var(--marfil);
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.trat-back-nombre {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 400;
+  color: var(--azul); margin-bottom: 0.3rem;
+}
+.trat-back-sub {
+  font-size: 0.85rem; color: var(--texto-suave);
+  font-style: italic; font-weight: 300;
+  margin-bottom: 0.8rem; padding-bottom: 0.8rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.trat-back-texto {
+  font-size: 0.85rem; color: var(--texto-mid);
+  line-height: 1.75; font-weight: 300;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.trat-back-puntos {
+  list-style: none; display: flex; flex-direction: column;
+  gap: 0.35rem; margin-bottom: 0.8rem; flex: 1;
+}
+.trat-back-puntos li {
+  font-size: 0.82rem; color: var(--texto-mid);
+  font-weight: 300; display: flex; gap: 0.5rem; align-items: flex-start;
+}
+.trat-back-puntos li::before {
+  content: ''; width: 5px; height: 5px; min-width: 5px;
+  border-radius: 50%; background: var(--azul); margin-top: 0.4rem;
+}
+.trat-back-cta {
+  display: inline-block; font-size: 0.78rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--azul); text-decoration: none; font-weight: 400;
+  border-bottom: 1px solid var(--azul); padding-bottom: 2px;
+  transition: opacity 0.3s; align-self: flex-start;
+}
+.trat-back-cta:hover { opacity: 0.7; }
+
+/* Flip: rotar la tarjeta entera 180deg en Y */
+.trat-card.flipped {
+  /* El transform de posición se mantiene vía JS,
+     solo añadimos rotateY(180deg) al transform existente */
+}
+
+@media (max-width: 1024px) {
+  .servicios-header { padding: 5rem 2rem 3rem; }
+  .servicios-stage { height: 420px; }
+  .trat-card { width: 260px; height: 360px; }
+  .servicios-arrow-left { left: 0.5rem; }
+  .servicios-arrow-right { right: 0.5rem; }
 }

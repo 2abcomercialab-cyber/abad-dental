@@ -96,3 +96,104 @@ document.getElementById('citaForm').addEventListener('submit',function(e){
     btn.style.background='';this.reset();
   },4000);
 });
+
+
+
+/* ═══════════════════════════════════════
+   TRATAMIENTOS v7 — Coverflow + flip real
+   ═══════════════════════════════════════ */
+
+// Empieza en el centro (índice 3 de 7 = posición central)
+let cfIdx = 3;
+const CF_TOTAL = 7;
+
+// Configuración de cada posición relativa
+// rel: -3 .. 0 .. +3
+const CF_POS = {
+  '-3': { tx: -750, ty: 55, tz: -340, ry:  52, scale: 0.62, opacity: 0.28, blur: 5 },
+  '-2': { tx: -490, ty: 28, tz: -210, ry:  38, scale: 0.74, opacity: 0.48, blur: 3 },
+  '-1': { tx: -258, ty:  8, tz:  -95, ry:  20, scale: 0.86, opacity: 0.72, blur: 1 },
+   '0': { tx:    0, ty:  0, tz:    0, ry:   0, scale: 1.00, opacity: 1,    blur: 0 },
+   '1': { tx:  258, ty:  8, tz:  -95, ry: -20, scale: 0.86, opacity: 0.72, blur: 1 },
+   '2': { tx:  490, ty: 28, tz: -210, ry: -38, scale: 0.74, opacity: 0.48, blur: 3 },
+   '3': { tx:  750, ty: 55, tz: -340, ry: -52, scale: 0.62, opacity: 0.28, blur: 5 },
+};
+
+function cfGetTransform(cfg, flipped) {
+  const flipY = flipped ? 180 : 0;
+  return `translateX(${cfg.tx}px) translateY(${cfg.ty}px) translateZ(${cfg.tz}px) rotateY(${cfg.ry + flipY}deg) scale(${cfg.scale})`;
+}
+
+function cfRender() {
+  const cards = document.querySelectorAll('.trat-card');
+
+  cards.forEach((card, i) => {
+    const rel = i - cfIdx;
+    const absRel = Math.max(-3, Math.min(3, rel));
+    const cfg = CF_POS[String(absRel)];
+    const isFlipped = card.classList.contains('flipped');
+
+    if (Math.abs(rel) > 3) {
+      card.style.opacity = '0';
+      card.style.pointerEvents = 'none';
+      card.style.zIndex = '0';
+      return;
+    }
+
+    card.style.transform = cfGetTransform(cfg, isFlipped && absRel === 0);
+    card.style.opacity = cfg.opacity;
+    card.style.filter  = cfg.blur > 0 ? `blur(${cfg.blur}px)` : 'none';
+    card.style.zIndex  = String(10 - Math.abs(absRel));
+    card.style.pointerEvents = Math.abs(absRel) <= 2 ? 'auto' : 'none';
+
+    // Quitar flip a las no-centrales
+    if (absRel !== 0 && isFlipped) {
+      card.classList.remove('flipped');
+    }
+  });
+}
+
+function cfMove(dir) {
+  // Desflipear central
+  const cards = document.querySelectorAll('.trat-card');
+  if (cards[cfIdx]) cards[cfIdx].classList.remove('flipped');
+
+  cfIdx = Math.max(0, Math.min(cfIdx + dir, CF_TOTAL - 1));
+  cfRender();
+}
+
+// Click
+document.addEventListener('click', function(e) {
+  const card = e.target.closest('.trat-card');
+  if (!card) return;
+
+  const cards = Array.from(document.querySelectorAll('.trat-card'));
+  const i = cards.indexOf(card);
+  const rel = i - cfIdx;
+
+  if (rel !== 0) {
+    // Mover al centro
+    cfMove(rel > 0 ? 1 : -1);
+    return;
+  }
+
+  // Flip real de la tarjeta central
+  const isFlipped = card.classList.contains('flipped');
+  card.classList.toggle('flipped');
+  const cfg = CF_POS['0'];
+  card.style.transform = cfGetTransform(cfg, !isFlipped);
+});
+
+// Scroll
+document.addEventListener('wheel', function(e) {
+  const wrap = document.getElementById('serviciosCoverflow');
+  if (!wrap) return;
+  const rect = wrap.getBoundingClientRect();
+  if (e.clientY < rect.top || e.clientY > rect.bottom) return;
+  e.preventDefault();
+  cfMove(e.deltaY > 0 ? 1 : -1);
+}, { passive: false });
+
+// Init
+document.addEventListener('DOMContentLoaded', cfRender);
+setTimeout(cfRender, 150);
