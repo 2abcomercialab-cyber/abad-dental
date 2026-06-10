@@ -180,7 +180,11 @@ setTimeout(cfRender, 150);
 const SECCIONES_ACTIVAS = [
   'implantologia',
   'odontopediatria-seccion',
-  'scanner-seccion'
+  'scanner-seccion',
+  'estetica-seccion',
+  'urgencias-seccion',
+  'endodoncia-seccion',
+  'blanqueamiento-seccion'
 ];
 
 function abrirSeccion(seccionId, e) {
@@ -205,3 +209,21 @@ function abrirSeccion(seccionId, e) {
     }, 150);
   }
 }
+
+
+// Click en tarjeta lateral → mover al centro
+document.addEventListener('click', function(e) {
+  const card = e.target.closest('.trat-card');
+  if (!card) return;
+
+  // Si el click fue en el botón Saber más, no hacer nada aquí
+  if (e.target.closest('.trat-saber-mas')) return;
+
+  const cards = Array.from(document.querySelectorAll('.trat-card'));
+  const i = cards.indexOf(card);
+  const rel = i - cfIdx;
+
+  if (rel !== 0) {
+    cfMove(rel > 0 ? 1 : -1);
+  }
+});

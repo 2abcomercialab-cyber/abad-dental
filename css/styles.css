@@ -1126,3 +1126,18 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
   opacity: 1;
   transform: none;
 }
+
+
+
+/* Trio doctores endodoncia */
+.implanto-doctores-trio {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.implanto-doctores-trio .implanto-doctor {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
