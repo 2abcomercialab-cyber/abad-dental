@@ -586,3 +586,543 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
   .servicios-arrow-left { left: 0.5rem; }
   .servicios-arrow-right { right: 0.5rem; }
 }
+
+
+
+/* ═══════════════════════════════════════
+   IMPLANTOLOGÍA — Sección acordeón
+   ═══════════════════════════════════════ */
+
+.implanto-section {
+  background: var(--blanco);
+  padding: 6rem 5rem;
+  border-top: 1px solid #e8f2f9;
+  animation: implantoBajando 0.6s cubic-bezier(0.76,0,0.24,1) both;
+}
+
+@keyframes implantoBajando {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.implanto-header {
+  max-width: 700px;
+  margin-bottom: 5rem;
+}
+
+.implanto-titulo { margin-top: 1rem; }
+
+.implanto-lead {
+  font-size: 1.1rem;
+  color: var(--texto-mid);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-top: 1.2rem;
+  max-width: 620px;
+}
+
+/* GRID */
+.implanto-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 6rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+/* ILUSTRACIÓN */
+.implanto-ilustracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 8rem;
+}
+
+.implanto-svg-wrap {
+  width: 220px;
+  height: 420px;
+  filter: drop-shadow(0 8px 30px rgba(2,84,142,0.12));
+}
+
+.implanto-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.implanto-svg-caption {
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* BLOQUES */
+.implanto-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.implanto-bloque {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.implanto-bloque:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.implanto-bloque-num {
+  font-family: var(--font-num);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--azul-claro);
+  line-height: 1;
+  min-width: 3rem;
+  padding-top: 0.2rem;
+}
+
+.implanto-bloque-titulo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--azul);
+  margin-bottom: 0.8rem;
+}
+
+.implanto-bloque-texto p {
+  font-size: 1rem;
+  color: var(--texto-mid);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+/* PASOS */
+.implanto-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.5rem;
+}
+
+.implanto-paso {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1rem 0;
+}
+
+.implanto-paso-num {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: var(--azul);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-num);
+  font-size: 0.88rem;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.implanto-paso strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--texto);
+  margin-bottom: 0.2rem;
+}
+
+.implanto-paso span {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.implanto-paso-conector {
+  width: 1px;
+  height: 20px;
+  background: #ddd;
+  margin-left: 15px;
+}
+
+/* FOOTER */
+.implanto-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  border-top: 1px solid #ebebeb;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.implanto-doctor {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.implanto-doctor-foto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(10%);
+  border: 2px solid var(--azul-claro);
+}
+
+.implanto-doctor-nombre {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--texto);
+}
+
+.implanto-doctor-titulo {
+  font-size: 0.72rem;
+  color: var(--azul);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+.implanto-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 1.1rem 2.5rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.76,0,0.24,1);
+  white-space: nowrap;
+}
+
+.implanto-cta:hover {
+  background: var(--azul-oscuro);
+  transform: translateX(4px);
+}
+
+.implanto-cta svg {
+  width: 16px; height: 16px;
+  transition: transform 0.3s;
+}
+
+.implanto-cta:hover svg { transform: translateX(5px); }
+
+/* BOTÓN TOGGLE en el carrusel */
+.trat-toggle-implanto {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--azul);
+  text-decoration: none;
+  font-weight: 300;
+  border-bottom: 1px solid var(--azul);
+  padding-bottom: 2px;
+  transition: opacity 0.3s;
+  align-self: flex-start;
+  cursor: pointer;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.trat-toggle-implanto:hover { opacity: 0.7; }
+.trat-card[data-id="implantologia"] .trat-card-back .trat-toggle-implanto {
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .implanto-section { padding: 5rem 2rem; }
+  .implanto-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .implanto-ilustracion { position: static; }
+  .implanto-footer { flex-direction: column; align-items: flex-start; }
+  .implanto-cta { width: 100%; justify-content: center; }
+}
+
+
+
+/* IMPLANTOLOGÍA — mejoras v8b */
+.implanto-bloque-titulo {
+  font-family: var(--font-display);
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+  color: var(--texto) !important;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.implanto-bloque-texto p {
+  font-size: 1.05rem;
+  color: var(--texto);
+  line-height: 1.95;
+  font-weight: 300;
+}
+
+.implanto-bloque-texto strong {
+  font-weight: 500;
+  color: var(--azul);
+}
+
+.implanto-bloque-num {
+  font-family: var(--font-num);
+  font-size: 3.5rem !important;
+  font-weight: 400;
+  color: #d0e8f5 !important;
+  line-height: 1;
+  min-width: 3.5rem;
+  padding-top: 0.2rem;
+}
+
+/* Más espacio antes de sección equipo */
+.implanto-section {
+  margin-bottom: 4rem;
+}
+
+/* SVG actualizado — nuevo viewBox */
+.implanto-svg-wrap {
+  width: 260px !important;
+  height: 480px !important;
+}
+
+
+/* ═══════════════════════════════════════
+   SEPARADOR + SCANNER ANIMACIÓN
+   ═══════════════════════════════════════ */
+
+.implanto-separador {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 4rem 0 3rem;
+}
+
+.implanto-separador-linea {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c5dded, transparent);
+}
+
+.implanto-separador-texto {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--azul);
+  font-weight: 300;
+  white-space: nowrap;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--azul-claro);
+  background: var(--blanco);
+}
+
+/* Animación escáner */
+.scanner-beam {
+  animation: scannerMove 2.8s cubic-bezier(0.45,0,0.55,1) infinite;
+  transform-origin: left center;
+}
+
+@keyframes scannerMove {
+  0%   { transform: translateX(0px);   opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateX(216px); opacity: 0; }
+}
+
+.scanner-svg-wrap {
+  width: 300px !important;
+  height: 280px !important;
+}
+
+/* SVG implante ajustado */
+.implanto-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ═══════════════════════════════════
+   TARJETAS v10 — Sin flip, botón saber más
+   ═══════════════════════════════════ */
+
+.trat-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2.5rem 2rem 2rem;
+}
+
+.trat-card-sub {
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+}
+
+.trat-saber-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--azul);
+  color: var(--azul);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.trat-saber-mas:hover {
+  opacity: 0.7;
+  transform: translateX(3px);
+}
+
+/* Quitar back de las tarjetas */
+.trat-card-back { display: none !important; }
+
+/* Scanner SVG más grande */
+.scanner-svg-wrap {
+  width: 320px !important;
+  height: 300px !important;
+}
+
+
+
+/* ═══════════════════════════════════
+   TARJETAS v10 — Sin flip, Saber más
+   ═══════════════════════════════════ */
+
+/* Ocultar back completamente */
+.trat-card-back { display: none !important; }
+
+/* Front limpio */
+.trat-card-front {
+  position: absolute; inset: 0;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.2rem !important;
+  padding: 2.5rem 2rem 2rem !important;
+  background: var(--marfil) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 50px rgba(0,0,0,0.25) !important;
+  backface-visibility: visible !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* Botón Saber más */
+.trat-saber-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--azul);
+  color: var(--azul);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  transition: all 0.3s;
+  margin-top: 0.8rem;
+}
+
+.trat-saber-mas:hover {
+  opacity: 0.7;
+  transform: translateX(4px);
+}
+
+
+
+/* ═══════════════════════════
+   TARJETAS — Sin flip v10d
+   ═══════════════════════════ */
+
+.trat-card-back { display: none !important; }
+
+.trat-card-front {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.2rem !important;
+  padding: 2.5rem 2rem 2rem !important;
+  background: var(--marfil) !important;
+  border-radius: 14px !important;
+  transform: none !important;
+  opacity: 1 !important;
+  backface-visibility: visible !important;
+}
+
+.trat-saber-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--azul);
+  color: var(--azul);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.trat-saber-mas:hover {
+  opacity: 0.7;
+  transform: translateY(2px);
+}
+
+.trat-saber-mas--inactivo {
+  border-bottom-color: #ccc;
+  color: #ccc;
+  cursor: default;
+  font-size: 0.78rem;
+}
+.trat-saber-mas--inactivo:hover {
+  opacity: 1;
+  transform: none;
+}

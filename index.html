@@ -78,109 +78,280 @@
       <p class="servicios-intro-text reveal">Cada persona es diferente. Por eso evaluamos tu caso antes de recomendarte cualquier tratamiento.</p>
     </div>
     <div class="servicios-coverflow" id="serviciosCoverflow">
-      <button class="servicios-arrow servicios-arrow-left" onclick="cfMove(-1)" aria-label="Anterior">&#8592;</button>
+      <button class="servicios-arrow servicios-arrow-left" onclick="cfMove(-1)">&#8592;</button>
       <div class="servicios-stage" id="serviciosStage">
         
         <div class="trat-card" data-id="endodoncia">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#B4DFFB" d="M23,5 C16.372583,5 12,12.6111593 12,22 C12,31.3888407 16.372583,61 23,61 C26.8661992,61 27.3053608,36.4098157 32.5,36.3875505 C38.6946392,36.4098157 38.1338008,61 42,61 C48.627417,61 53,31.3888407 53,22 C53,12.6111593 48.627417,5 42,5 C38.8333333,5 35.6666667,8 32.5,8 C29.3333333,8 26.1666667,5 23,5 Z"/><path stroke="#f77394" stroke-linecap="round" stroke-width="2" d="M20.3581444 15.3937383C21.2170084 13.7049025 20.0438974 11.1436439 21.8771249 10.6650098 25.0893529 9.82633487 29.405461 12.2802948 32.7233768 12.1653216 36.3279846 12.0404139 48.3316734 5.61363751 48.5241951 15.2452607 48.7004545 24.0633042 31.9891439 17.8276847 26.4639953 24.4971272 19.6555664 32.7156257 21.6995306 41.5644033 21.8771249 51.0979438M36.6689172 21.3888141C46.5781213 31.5182989 42.5884315 24.0766353 43.8559284 51.6820434M25.7468717 24.9013595C19.0067477 26.8123007 21.050485 24.8731654 18.3311527 28.9561202M23 31L25.6193475 36.1768941M21.260282 37.7862636C20.0128626 39.7014436 18.7654433 41.6166237 17.5180239 43.5318037M41.9297672 26.7503335L38.5000117 32.2603305M43.6536403 32L46.9217029 39.137032M43.5233752 43.1578888L39.9412553 47.1104255"/></g></svg></div>
+            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <path fill="#B4DFFB" d="M23,5 C16.372583,5 12,12.6111593 12,22 C12,31.3888407 16.372583,61 23,61 C26.8661992,61 27.3053608,36.4098157 32.5,36.3875505 C38.6946392,36.4098157 38.1338008,61 42,61 C48.627417,61 53,31.3888407 53,22 C53,12.6111593 48.627417,5 42,5 C38.8333333,5 35.6666667,8 32.5,8 C29.3333333,8 26.1666667,5 23,5 Z"></path> <path stroke="#f77394" stroke-linecap="round" stroke-width="2" d="M20.3581444 15.3937383C21.2170084 13.7049025 20.0438974 11.1436439 21.8771249 10.6650098 25.0893529 9.82633487 29.405461 12.2802948 32.7233768 12.1653216 36.3279846 12.0404139 48.3316734 5.61363751 48.5241951 15.2452607 48.7004545 24.0633042 31.9891439 17.8276847 26.4639953 24.4971272 19.6555664 32.7156257 21.6995306 41.5644033 21.8771249 51.0979438M36.6689172 21.3888141C46.5781213 31.5182989 42.5884315 24.0766353 43.8559284 51.6820434M25.7468717 24.9013595C19.0067477 26.8123007 21.050485 24.8731654 18.3311527 28.9561202M23 31L25.6193475 36.1768941M21.260282 37.7862636C20.0128626 39.7014436 18.7654433 41.6166237 17.5180239 43.5318037M41.9297672 26.7503335L38.5000117 32.2603305M43.6536403 32L46.9217029 39.137032M43.5233752 43.1578888L39.9412553 47.1104255"></path> </g> </g></svg></div>
             <div class="trat-card-nombre">Endodoncia</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Endodoncia</div>
-            <div class="trat-back-sub">Salvamos tu diente antes de perderlo</div>
-            <p class="trat-back-texto">Cuando un diente tiene una infección profunda o un daño grave, la endodoncia permite tratarlo por dentro y conservarlo. Es un procedimiento preciso que hoy, con la tecnología adecuada, resulta mucho más cómodo de lo que la gente imagina.</p>
-            <ul class="trat-back-puntos"><li>Tratamiento de conductos con alta precisión</li><li>Conservamos tu diente natural</li><li>Procedimiento cómodo y controlado</li><li>Recuperación rápida</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas trat-saber-mas--inactivo">Próximamente</button>
           </div>
         </div>
         <div class="trat-card" data-id="estetica">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#B4DFFB" d="M23,6 C16.372583,6 12,13.6111593 12,23 C12,32.3888407 16.372583,62 23,62 C26.8661992,62 27.3053608,37.4098157 32.5,37.3875505 C38.6946392,37.4098157 38.1338008,62 42,62 C48.627417,62 53,32.3888407 53,23 C53,13.6111593 48.627417,6 42,6 C38.8333333,6 35.6666667,9 32.5,9 C29.3333333,9 26.1666667,6 23,6 Z"/><path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M25,10 C20.581722,10 17,13.581722 17,18"/><polygon fill="#FF78C7" points="47.728 15.228 41.364 17.092 43.228 10.728 41.364 4.364 47.728 6.228 54.092 4.364 52.228 10.728 54.092 17.092" transform="rotate(-45 47.728 10.728)"/><polygon fill="#FF78C7" points="34.561 25.341 30.629 26.493 31.78 22.561 30.629 18.629 34.561 19.78 38.493 18.629 37.341 22.561 38.493 26.493" transform="rotate(-45 34.56 22.56)"/></g></svg></div>
+            <div class="trat-card-icon"><svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"> <g fill="none" fill-rule="evenodd"> <path fill="#B4DFFB" d="M23,6 C16.372583,6 12,13.6111593 12,23 C12,32.3888407 16.372583,62 23,62 C26.8661992,62 27.3053608,37.4098157 32.5,37.3875505 C38.6946392,37.4098157 38.1338008,62 42,62 C48.627417,62 53,32.3888407 53,23 C53,13.6111593 48.627417,6 42,6 C38.8333333,6 35.6666667,9 32.5,9 C29.3333333,9 26.1666667,6 23,6 Z"/> <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M25,10 C20.581722,10 17,13.581722 17,18"/> <polygon fill="#FF78C7" points="47.728 15.228 41.364 17.092 43.228 10.728 41.364 4.364 47.728 6.228 54.092 4.364 52.228 10.728 54.092 17.092" transform="rotate(-45 47.728 10.728)"/> <polygon fill="#FF78C7" points="34.561 25.341 30.629 26.493 31.78 22.561 30.629 18.629 34.561 19.78 38.493 18.629 37.341 22.561 38.493 26.493" transform="rotate(-45 34.56 22.56)"/> </g> </svg></div>
             <div class="trat-card-nombre">Estética Dental</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Estética Dental</div>
-            <div class="trat-back-sub">Una sonrisa que te represente</div>
-            <p class="trat-back-texto">La estética dental no es solo cuestión de apariencia — una sonrisa que te gusta cambia cómo te presentas al mundo. Trabajamos con carillas de porcelana, coronas de zirconio y diseños personalizados, siempre buscando un resultado natural y acorde a tu rostro.</p>
-            <ul class="trat-back-puntos"><li>Carillas de porcelana ultrafinas</li><li>Coronas de zirconio de alta resistencia</li><li>Diseño de sonrisa personalizado</li><li>Resultados naturales y duraderos</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas trat-saber-mas--inactivo">Próximamente</button>
           </div>
         </div>
         <div class="trat-card" data-id="odontopediatria">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M831.878734 613.511007m-111.794399 0a111.794398 111.794398 0 1 0 223.588797 0 111.794398 111.794398 0 1 0-223.588797 0Z" fill="#e5dedc"/><path d="M153.774624 613.511007m-111.794399 0a111.794398 111.794398 0 1 0 223.588797 0 111.794398 111.794398 0 1 0-223.588797 0Z" fill="#e5dedc"/><path d="M502.669101 581.443759m-374.788163 0a374.788163 374.788163 0 1 0 749.576326 0 374.788163 374.788163 0 1 0-749.576326 0Z" fill="#e5dedc"/><path d="M148.412444 477.375133m-117.015469 0a117.015468 117.015468 0 1 0 234.030937 0 117.015468 117.015468 0 1 0-234.030937 0Z" fill="#1993c8"/><path d="M254.985772 316.791952m-141.780274 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"/><path d="M429.715231 209.583629m-141.780274 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"/><path d="M633.866125 218.544114m-141.780274 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"/><path d="M775.646398 316.791952m-141.780273 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"/><path d="M877.421986 477.375133m-115.181038 0a115.181038 115.181038 0 1 0 230.362077 0 115.181038 115.181038 0 1 0-230.362077 0Z" fill="#1993c8"/><path d="M523.235884 745.731078c-35.806663 0-64.840045 29.033383-64.840046 64.840045 0 35.806663 29.033383 64.840045 64.840046 64.840046 35.806663 0 64.840045-29.033383 64.840045-64.840046 0-35.84194-29.033383-64.840045-64.840045-64.840045z m0 85.618493c-11.465188 0-20.778448-9.31326-20.778448-20.778448s9.31326-20.778448 20.778448-20.778447c11.500465 0 20.778448 9.31326 20.778447 20.778447 0.035278 11.465188-9.277983 20.778448-20.778447 20.778448z" fill="#00779e"/></svg></div>
+            <div class="trat-card-icon"><svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M831.878734 613.511007m-111.794399 0a111.794398 111.794398 0 1 0 223.588797 0 111.794398 111.794398 0 1 0-223.588797 0Z" fill="#e5dedc"></path><path d="M153.774624 613.511007m-111.794399 0a111.794398 111.794398 0 1 0 223.588797 0 111.794398 111.794398 0 1 0-223.588797 0Z" fill="#e5dedc"></path><path d="M502.669101 581.443759m-374.788163 0a374.788163 374.788163 0 1 0 749.576326 0 374.788163 374.788163 0 1 0-749.576326 0Z" fill="#e5dedc"></path><path d="M148.412444 477.375133m-117.015469 0a117.015468 117.015468 0 1 0 234.030937 0 117.015468 117.015468 0 1 0-234.030937 0Z" fill="#1993c8"></path><path d="M254.985772 316.791952m-141.780274 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"></path><path d="M429.715231 209.583629m-141.780274 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"></path><path d="M633.866125 218.544114m-141.780274 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"></path><path d="M775.646398 316.791952m-141.780273 0a141.780274 141.780274 0 1 0 283.560547 0 141.780274 141.780274 0 1 0-283.560547 0Z" fill="#1993c8"></path><path d="M877.421986 477.375133m-115.181038 0a115.181038 115.181038 0 1 0 230.362077 0 115.181038 115.181038 0 1 0-230.362077 0Z" fill="#1993c8"></path><path d="M523.235884 745.731078c-35.806663 0-64.840045 29.033383-64.840046 64.840045 0 35.806663 29.033383 64.840045 64.840046 64.840046 35.806663 0 64.840045-29.033383 64.840045-64.840046 0-35.84194-29.033383-64.840045-64.840045-64.840045z m0 85.618493c-11.465188 0-20.778448-9.31326-20.778448-20.778448s9.31326-20.778448 20.778448-20.778447c11.500465 0 20.778448 9.31326 20.778447 20.778447 0.035278 11.465188-9.277983 20.778448-20.778447 20.778448z" fill="#00779e"></path></g></svg></div>
             <div class="trat-card-nombre">Odontopediatría</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Odontopediatría</div>
-            <div class="trat-back-sub">Cuidado para los más pequeños</div>
-            <p class="trat-back-texto">La primera visita al dentista marca cómo un niño vivirá la experiencia dental el resto de su vida. En ABAD cuidamos ese momento: un trato cercano, un ambiente tranquilo y una especialista centrada en que el niño se sienta seguro desde el primer día.</p>
-            <ul class="trat-back-puntos"><li>Atención especializada desde los primeros dientes</li><li>Prevención y hábitos desde temprana edad</li><li>Tratamientos adaptados a cada etapa</li><li>Trato cercano y ambiente sin miedo</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas" onclick="abrirSeccion('odontopediatria-seccion', event)">Saber más ↓</button>
           </div>
         </div>
         <div class="trat-card" data-id="implantologia">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#B4DFFB" d="M51.8137386,32 C52.5838535,26.7174939 53,21.8964501 53,19 C53,9.61115925 48.627417,2 42,2 C38.8333333,2 35.6666667,5 32.5,5 C29.3333333,5 26.1666667,2 23,2 C16.372583,2 12,9.61115925 12,19 C12,21.8964501 12.4161465,26.7174939 13.1862614,32 Z"/><polygon fill="#979797" points="24 32 41 32 41 39 38 43 38 58 32.5 62 27 58 27 43 24 39"/><path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M25,6 C20.581722,6 17,9.581722 17,14"/><polygon fill="#D8D8D8" points="27 51 38 54 38 56 27 53"/><polygon fill="#D8D8D8" points="27 47 38 50 38 52 27 49"/><polygon fill="#D8D8D8" points="27 43 38 46 38 48 27 45"/></g></svg></div>
+            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <path fill="#B4DFFB" d="M51.8137386,32 C52.5838535,26.7174939 53,21.8964501 53,19 C53,9.61115925 48.627417,2 42,2 C38.8333333,2 35.6666667,5 32.5,5 C29.3333333,5 26.1666667,2 23,2 C16.372583,2 12,9.61115925 12,19 C12,21.8964501 12.4161465,26.7174939 13.1862614,32 L51.8137386,32 L51.8137386,32 Z"></path> <polygon fill="#979797" points="24 32 41 32 41 39 38 43 38 58 32.5 62 27 58 27 43 24 39"></polygon> <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M25,6 C20.581722,6 17,9.581722 17,14"></path> <polygon fill="#D8D8D8" points="27 51 38 54 38 56 27 53"></polygon> <polygon fill="#D8D8D8" points="27 47 38 50 38 52 27 49"></polygon> <polygon fill="#D8D8D8" points="27 43 38 46 38 48 27 45"></polygon> </g> </g></svg></div>
             <div class="trat-card-nombre">Implantología</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Implantología</div>
-            <div class="trat-back-sub">La solución más avanzada</div>
-            <p class="trat-back-texto">Perder un diente no tiene que ser definitivo. El implante dental es hoy la forma más natural de recuperarlo: se integra con el hueso y funciona como un diente propio. No prometemos que sea la solución para todos — primero evaluamos tu caso. Pero cuando es la opción correcta, los resultados marcan la diferencia.</p>
-            <ul class="trat-back-puntos"><li>Se integra con el hueso de forma natural</li><li>Funciona y se siente como un diente real</li><li>No afecta a los dientes vecinos</li><li>Solución muy duradera con el cuidado adecuado</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas" onclick="abrirSeccion('implantologia', event)">Saber más ↓</button>
           </div>
         </div>
         <div class="trat-card" data-id="urgencias">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="49" cy="15" r="13" fill="#E43535"/><rect width="4" height="15" x="47" y="5" fill="#FFF" rx="2"/><circle cx="49" cy="23" r="2" fill="#FFF"/><g transform="translate(7 23)"><path fill="#B4DFFB" d="M7.07142857,0 C2.81094622,0 0,4.89288809 0,10.9285714 C0,16.9642548 2.81094622,36 7.07142857,36 C9.55684234,36 10.1962339,20.1920244 13.5356448,20.177711 C17.5179129,20.1920244 16.8003005,36 19.2857143,36 C23.5461966,36 26.3571429,16.9642548 26.3571429,10.9285714 C26.3571429,4.89288809 23.5461966,0 19.2857143,0 C17.25,0 15.5713591,1.96309836 13.5356448,1.96309836 C11.4999305,1.96309836 9.10714286,0 7.07142857,0 Z"/><path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M8.17857143,3 C5.41714768,3 3.17857143,5.23857625 3.17857143,8"/></g><polygon fill="#E43535" points="29.561 28.341 25.629 29.493 26.78 25.561 25.629 21.629 29.561 22.78 33.493 21.629 32.341 25.561 33.493 29.493" transform="rotate(-45 29.56 25.56)"/><polygon fill="#E43535" points="21.78 33.67 19.107 34.453 19.89 31.78 19.107 29.107 21.78 29.89 24.453 29.107 23.67 31.78 24.453 34.453" transform="rotate(-45 21.78 31.78)"/></g></svg></div>
+            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <circle cx="49" cy="15" r="13" fill="#E43535"></circle> <rect width="4" height="15" x="47" y="5" fill="#FFF" rx="2"></rect> <circle cx="49" cy="23" r="2" fill="#FFF"></circle> <g transform="translate(7 23)"> <path fill="#B4DFFB" d="M7.07142857,0 C2.81094622,0 0,4.89288809 0,10.9285714 C0,16.9642548 2.81094622,36 7.07142857,36 C9.55684234,36 10.1962339,20.1920244 13.5356448,20.177711 C17.5179129,20.1920244 16.8003005,36 19.2857143,36 C23.5461966,36 26.3571429,16.9642548 26.3571429,10.9285714 C26.3571429,4.89288809 23.5461966,0 19.2857143,0 C17.25,0 15.5713591,1.96309836 13.5356448,1.96309836 C11.4999305,1.96309836 9.10714286,0 7.07142857,0 Z"></path> <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M8.17857143,3 C5.41714768,3 3.17857143,5.23857625 3.17857143,8"></path> </g> <polygon fill="#E43535" points="29.561 28.341 25.629 29.493 26.78 25.561 25.629 21.629 29.561 22.78 33.493 21.629 32.341 25.561 33.493 29.493" transform="rotate(-45 29.56 25.56)"></polygon> <polygon fill="#E43535" points="21.78 33.67 19.107 34.453 19.89 31.78 19.107 29.107 21.78 29.89 24.453 29.107 23.67 31.78 24.453 34.453" transform="rotate(-45 21.78 31.78)"></polygon> </g> </g></svg></div>
             <div class="trat-card-nombre">Urgencias Dentales</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Urgencias Dentales</div>
-            <div class="trat-back-sub">Cuando no puede esperar</div>
-            <p class="trat-back-texto">Un dolor dental intenso, una fractura o una infección no pueden esperar días. Hacemos todo lo posible por atenderte el mismo día. Llámanos, cuéntanos qué pasa y buscamos un hueco lo antes posible.</p>
-            <ul class="trat-back-puntos"><li>Atención el mismo día siempre que sea posible</li><li>Llamada directa sin esperas</li><li>Diagnóstico y alivio inmediato</li><li>Seguimiento posterior si es necesario</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas trat-saber-mas--inactivo">Próximamente</button>
           </div>
         </div>
         <div class="trat-card" data-id="radiologia">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect width="60" height="45" x="2" y="7" fill="#595959" rx="3"/><polygon fill="#979797" points="27 52 37 52 38 59 26 59"/><rect width="54" height="39" x="5" y="10" fill="#ddacd4"/><path fill="#B4DFFB" d="M27.8292683,19 C24.9196706,19 23,21.9900983 23,25.6785714 C23,29.3670446 24.9196706,41 27.8292683,41 C29.526624,41 29.7194267,31.3395704 32,31.3308234 C34.7195977,31.3395704 34.473376,41 36.1707317,41 C39.0803294,41 41,29.3670446 41,25.6785714 C41,21.9900983 39.0803294,19 36.1707317,19 C34.7804878,19 33.3902439,20.1785714 32,20.1785714 C30.6097561,20.1785714 29.2195122,19 27.8292683,19 Z"/><rect width="18" height="2" x="23" y="59" fill="#595959"/></g></svg></div>
+            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <rect width="60" height="45" x="2" y="7" fill="#595959" rx="3"></rect> <polygon fill="#979797" points="27 52 37 52 38 59 26 59"></polygon> <rect width="54" height="39" x="5" y="10" fill="#ddacd4"></rect> <path fill="#B4DFFB" d="M27.8292683,19 C24.9196706,19 23,21.9900983 23,25.6785714 C23,29.3670446 24.9196706,41 27.8292683,41 C29.526624,41 29.7194267,31.3395704 32,31.3308234 C34.7195977,31.3395704 34.473376,41 36.1707317,41 C39.0803294,41 41,29.3670446 41,25.6785714 C41,21.9900983 39.0803294,19 36.1707317,19 C34.7804878,19 33.3902439,20.1785714 32,20.1785714 C30.6097561,20.1785714 29.2195122,19 27.8292683,19 Z"></path> <rect width="18" height="2" x="23" y="59" fill="#595959"></rect> </g> </g></svg></div>
             <div class="trat-card-nombre">Escáner Digital</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Escáner Digital</div>
-            <div class="trat-back-sub">Diagnóstico preciso y rápido</div>
-            <p class="trat-back-texto">Nuestro escáner digital obtiene imágenes detalladas de tu boca en segundos. Esto nos permite hacer diagnósticos más precisos, planificar tratamientos con más información y, en definitiva, tomar mejores decisiones para tu salud. Todo de forma rápida y con una exposición mínima.</p>
-            <ul class="trat-back-puntos"><li>Imágenes de alta resolución al instante</li><li>Mínima exposición, máxima información</li><li>Base para un diagnóstico honesto y preciso</li><li>Tecnología XMIND Prime de última generación</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas" onclick="abrirSeccion('scanner-seccion', event)">Saber más ↓</button>
           </div>
         </div>
         <div class="trat-card" data-id="blanqueamiento">
           <div class="trat-card-front">
-            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><polygon fill="#FF78C7" points="17.561 10.341 13.629 11.493 14.78 7.561 13.629 3.629 17.561 4.78 21.493 3.629 20.341 7.561 21.493 11.493" transform="rotate(-45 17.56 7.56)"/><polygon fill="#FF78C7" points="17.78 55.67 15.107 56.453 15.89 53.78 15.107 51.107 17.78 51.89 20.453 51.107 19.67 53.78 20.453 56.453" transform="rotate(-45 17.78 53.78)"/><path fill="#B4DFFB" d="M26.0714286,14 C21.8109462,14 19,18.8928881 19,24.9285714 C19,30.9642548 21.8109462,50 26.0714286,50 C28.5568423,50 28.8391605,34.1920244 32.1785714,34.177711 C36.1608395,34.1920244 35.8003005,50 38.2857143,50 C42.5461966,50 45.3571429,30.9642548 45.3571429,24.9285714 C45.3571429,18.8928881 42.5461966,14 38.2857143,14 C36.25,14 34.2142857,15.9285714 32.1785714,15.9285714 C30.1428571,15.9285714 28.1071429,14 26.0714286,14 Z"/><polygon fill="#FF78C7" points="36.78 23.67 34.107 24.453 34.89 21.78 34.107 19.107 36.78 19.89 39.453 19.107 38.67 21.78 39.453 24.453" transform="rotate(-45 36.78 21.78)"/><path stroke="#FF78C7" stroke-linecap="round" stroke-width="2" d="M17.4701388,29.01117 C9.93126448,29.8980783 4.92849706,31.4581568 4.92849706,33.2346166 C4.92849706,35.9960404 17.0168088,38.2346166 31.9284971,38.2346166 C46.8401853,38.2346166 58.9284971,35.9960404 58.9284971,33.2346166 C58.9284971,31.8411183 55.8501866,30.5807641 50.8841565,29.6740337" transform="rotate(-30 31.928 33.623)"/><path stroke="#FF78C7" stroke-linecap="round" stroke-width="2" d="M13.3558551,29.1929448 C8.13881926,30.1045985 4.8826859,31.3969451 4.8826859,32.830127 C4.8826859,35.5915508 16.9709977,37.830127 31.8826859,37.830127 C46.7943741,37.830127 58.8826859,35.5915508 58.8826859,32.830127 C58.8826859,31.0833094 54.0454791,29.5457122 46.7162979,28.6516378" transform="rotate(30 31.883 33.24)"/></g></svg></div>
+            <div class="trat-card-icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <polygon fill="#FF78C7" points="17.561 10.341 13.629 11.493 14.78 7.561 13.629 3.629 17.561 4.78 21.493 3.629 20.341 7.561 21.493 11.493" transform="rotate(-45 17.56 7.56)"></polygon> <polygon fill="#FF78C7" points="17.78 55.67 15.107 56.453 15.89 53.78 15.107 51.107 17.78 51.89 20.453 51.107 19.67 53.78 20.453 56.453" transform="rotate(-45 17.78 53.78)"></polygon> <path fill="#B4DFFB" d="M26.0714286,14 C21.8109462,14 19,18.8928881 19,24.9285714 C19,30.9642548 21.8109462,50 26.0714286,50 C28.5568423,50 28.8391605,34.1920244 32.1785714,34.177711 C36.1608395,34.1920244 35.8003005,50 38.2857143,50 C42.5461966,50 45.3571429,30.9642548 45.3571429,24.9285714 C45.3571429,18.8928881 42.5461966,14 38.2857143,14 C36.25,14 34.2142857,15.9285714 32.1785714,15.9285714 C30.1428571,15.9285714 28.1071429,14 26.0714286,14 Z"></path> <polygon fill="#FF78C7" points="36.78 23.67 34.107 24.453 34.89 21.78 34.107 19.107 36.78 19.89 39.453 19.107 38.67 21.78 39.453 24.453" transform="rotate(-45 36.78 21.78)"></polygon> <path stroke="#FF78C7" stroke-linecap="round" stroke-width="2" d="M17.4701388,29.01117 C9.93126448,29.8980783 4.92849706,31.4581568 4.92849706,33.2346166 C4.92849706,35.9960404 17.0168088,38.2346166 31.9284971,38.2346166 C46.8401853,38.2346166 58.9284971,35.9960404 58.9284971,33.2346166 C58.9284971,31.8411183 55.8501866,30.5807641 50.8841565,29.6740337" transform="rotate(-30 31.928 33.623)"></path> <path stroke="#FF78C7" stroke-linecap="round" stroke-width="2" d="M13.3558551,29.1929448 C8.13881926,30.1045985 4.8826859,31.3969451 4.8826859,32.830127 C4.8826859,35.5915508 16.9709977,37.830127 31.8826859,37.830127 L31.8826859,37.830127 C46.7943741,37.830127 58.8826859,35.5915508 58.8826859,32.830127 C58.8826859,31.0833094 54.0454791,29.5457122 46.7162979,28.6516378" transform="rotate(30 31.883 33.24)"></path> </g> </g></svg></div>
             <div class="trat-card-nombre">Blanqueamiento</div>
-            <div class="trat-card-hint">Pulsa para saber más</div>
-          </div>
-          <div class="trat-card-back">
-            <div class="trat-back-nombre">Blanqueamiento</div>
-            <div class="trat-back-sub">Tono natural, resultado real</div>
-            <p class="trat-back-texto">Los dientes cambian de color con el tiempo por el café, el té, el vino o simplemente los años. El blanqueamiento dental, realizado de forma controlada, puede recuperar un tono más claro de manera segura. Sin prometer milagros: el resultado depende de cada persona y del estado de partida.</p>
-            <ul class="trat-back-puntos"><li>Tratamiento supervisado por nuestro equipo</li><li>Proceso seguro y sin dañar el esmalte</li><li>Resultado natural, no artificial</li><li>Opciones en clínica y para casa</li></ul>
-            <a href="#contacto" class="trat-back-cta">Solicitar cita →</a>
+            <button class="trat-saber-mas trat-saber-mas--inactivo">Próximamente</button>
           </div>
         </div>
       </div>
-      <button class="servicios-arrow servicios-arrow-right" onclick="cfMove(1)" aria-label="Siguiente">&#8594;</button>
+      <button class="servicios-arrow servicios-arrow-right" onclick="cfMove(1)">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<section id="implantologia" class="implanto-section" style="display:none;">
+  <div class="container">
+    <div class="implanto-header">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Tratamiento estrella</span></div>
+      <h2 class="section-title implanto-titulo">Recupera tu diente.<br><em>Sin compromisos.</em></h2>
+      <p class="implanto-lead">El implante dental es hoy la solución más avanzada para sustituir un diente perdido. Pero no es para todos — y eso es lo primero que te diremos.</p>
+    </div>
+    <div class="implanto-grid">
+      <div class="implanto-ilustracion">
+        <div class="implanto-svg-wrap"><svg viewBox="0 0 340 500" xmlns="http://www.w3.org/2000/svg" font-family="Jost,sans-serif">
+  <text x="10" y="118" font-size="11" fill="#02548e" font-weight="400" letter-spacing="1">CORONA</text>
+  <line x1="78" y1="118" x2="105" y2="118" stroke="#02548e" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.6"/>
+  <path d="M115,75 C105,75 95,85 95,100 C95,110 98,120 105,127 C112,134 118,155 130,155 L165,155 C177,155 183,134 190,127 C197,120 200,110 200,100 C200,85 190,75 180,75 Z" fill="#e8f4fd" stroke="#02548e" stroke-width="2"/>
+  <text x="10" y="198" font-size="11" fill="#02548e" font-weight="400" letter-spacing="1">PILAR</text>
+  <line x1="48" y1="198" x2="105" y2="198" stroke="#02548e" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.6"/>
+  <polygon points="132,155 162,155 166,205 128,205" fill="#b8d8ef" stroke="#02548e" stroke-width="1.5"/>
+  <text x="10" y="278" font-size="11" fill="#02548e" font-weight="400" letter-spacing="1">TORNILLO</text>
+  <line x1="78" y1="278" x2="108" y2="278" stroke="#02548e" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.6"/>
+  <path d="M118,205 L177,205 L179,315 L147,338 L116,315 Z" fill="#d0e8f5" stroke="#02548e" stroke-width="2"/>
+  <line x1="116" y1="220" x2="179" y2="220" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="232" x2="179" y2="232" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="244" x2="179" y2="244" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="256" x2="179" y2="256" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="268" x2="179" y2="268" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="280" x2="179" y2="280" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="292" x2="179" y2="292" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <line x1="116" y1="304" x2="179" y2="304" stroke="#02548e" stroke-width="1.5" opacity="0.35"/>
+  <text x="10" y="400" font-size="11" fill="#02548e" font-weight="400" letter-spacing="1">HUESO</text>
+  <line x1="55" y1="400" x2="90" y2="400" stroke="#02548e" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.6"/>
+  <rect x="80" y="338" width="135" height="115" rx="10" fill="#e0f0f8" stroke="#7ab8d8" stroke-width="1.5"/>
+  <ellipse cx="105" cy="360" rx="14" ry="9" fill="#c5e0ef" opacity="0.7"/>
+  <ellipse cx="140" cy="367" rx="18" ry="11" fill="#c5e0ef" opacity="0.6"/>
+  <ellipse cx="173" cy="358" rx="13" ry="8" fill="#c5e0ef" opacity="0.7"/>
+  <ellipse cx="115" cy="385" rx="16" ry="10" fill="#b8d8e8" opacity="0.5"/>
+  <ellipse cx="158" cy="390" rx="20" ry="12" fill="#b8d8e8" opacity="0.45"/>
+  <text x="147" y="432" text-anchor="middle" font-size="9" fill="#7ab8d8" font-weight="300" letter-spacing="1.5">TEJIDO ÓSEO</text>
+</svg></div>
+      </div>
+      <div class="implanto-contenido">
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">01</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">¿Qué es un implante?</h3>
+            <p>Un implante es una <strong>raíz artificial de titanio</strong> que se integra con el hueso. Sobre ella se coloca una <strong>corona a medida</strong> indistinguible de un diente propio.</p>
+          </div>
+        </div>
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">02</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">¿Para quién es?</h3>
+            <p>No todo el mundo es candidato. Realizamos un <strong>diagnóstico completo</strong> para saber si es la mejor opción para ti según tu hueso disponible y salud general.</p>
+          </div>
+        </div>
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">03</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">El proceso</h3>
+            <p>Valoración → <strong>Diagnóstico digital</strong> → Colocación → <strong>Resultado final</strong>. Cada paso planificado con precisión antes de actuar.</p>
+          </div>
+        </div></div>
+    </div>
+    <div class="implanto-separador">
+      <div class="implanto-separador-linea"></div>
+      <div class="implanto-separador-texto">Especialista responsable</div>
+      <div class="implanto-separador-linea"></div>
+    </div>
+    <div class="implanto-footer">
+      <div class="implanto-doctor">
+        <img src="/images/doctor-ivan.png" alt="Dr. Iván Arnáiz Abad" class="implanto-doctor-foto">
+        <div class="implanto-doctor-info">
+          <div class="implanto-doctor-nombre">Dr. Iván Arnáiz Abad</div>
+          <div class="implanto-doctor-titulo">Especialista en Implantología · Invisalign · Zirconio</div>
+        </div>
+      </div>
+      <a href="#contacto" class="implanto-cta">Solicitar valoración gratuita <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+<section id="odontopediatria-seccion" class="implanto-section" style="display:none;">
+  <div class="container">
+    <div class="implanto-header">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Especialidad pediátrica</span></div>
+      <h2 class="section-title implanto-titulo">La primera visita<br><em>importa mucho.</em></h2>
+      <p class="implanto-lead">Cómo viva un niño su primera experiencia en el dentista marcará cómo se relacionará con su salud dental el resto de su vida.</p>
+    </div>
+    <div class="implanto-grid">
+      <div class="implanto-ilustracion">
+        <div class="implanto-svg-wrap"><svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" font-family="Jost,sans-serif">
+  <path d="M130,100 C120,100 112,110 112,124 C112,134 115,143 122,150 C128,156 130,175 137,175 L158,175 C165,175 167,156 173,150 C180,143 183,134 183,124 C183,110 175,100 165,100 Z" fill="#f0f8ff" stroke="#7ab8d8" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="155" y1="90" x2="155" y2="100" stroke="#02548e" stroke-width="2" opacity="0.4"/>
+  <polygon points="150,100 160,100 155,110" fill="#02548e" opacity="0.3"/>
+  <path d="M78,45 C64,45 52,58 52,76 C52,91 57,105 67,114 C76,122 79,152 89,152 L116,152 C126,152 129,122 138,114 C148,105 153,91 153,76 C153,58 141,45 127,45 C120,45 112,51 102,54 C92,51 85,45 78,45 Z" fill="#e8f4fd" stroke="#02548e" stroke-width="2.5"/>
+  <circle cx="86" cy="88" r="4" fill="#02548e" opacity="0.2"/>
+  <circle cx="118" cy="88" r="4" fill="#02548e" opacity="0.2"/>
+  <circle cx="84" cy="86" r="1.5" fill="#02548e" opacity="0.5"/>
+  <circle cx="116" cy="86" r="1.5" fill="#02548e" opacity="0.5"/>
+  <path d="M88,104 Q102,116 116,104" fill="none" stroke="#02548e" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M67,60 Q71,55 78,58" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <text x="102" y="175" text-anchor="middle" font-size="10" fill="#02548e" font-weight="400">Diente de leche</text>
+  <text x="157" y="195" text-anchor="middle" font-size="9" fill="#7ab8d8" font-weight="300" opacity="0.8">diente permanente</text>
+  <text x="140" y="258" text-anchor="middle" font-size="10" fill="#02548e" font-weight="300" letter-spacing="1.5" opacity="0.7">CUIDAMOS CADA ETAPA</text>
+</svg></div>
+      </div>
+      <div class="implanto-contenido">
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">01</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">¿Cuándo traer al niño?</h3>
+            <p>Recomendamos la <strong>primera visita alrededor de los 2-3 años</strong>. Cuanto antes se acostumbre al entorno, mejor vivirá cada visita futura.</p>
+          </div>
+        </div>
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">02</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">Trato cercano, sin miedo</h3>
+            <p>La Dra. María Abad sabe cómo hablarle a un niño, a qué ritmo ir y cómo convertir la visita en algo <strong>tranquilo y sin drama</strong>.</p>
+          </div>
+        </div>
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">03</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">Prevención desde el principio</h3>
+            <p><strong>Revisiones, sellados y buenos hábitos</strong> desde pequeños son la mejor inversión para la salud dental de tu hijo a largo plazo.</p>
+          </div>
+        </div></div>
+    </div>
+    <div class="implanto-separador">
+      <div class="implanto-separador-linea"></div>
+      <div class="implanto-separador-texto">Especialista responsable</div>
+      <div class="implanto-separador-linea"></div>
+    </div>
+    <div class="implanto-footer">
+      <div class="implanto-doctor">
+        <img src="/images/doctor-maria.png" alt="Dra. María Abad" class="implanto-doctor-foto">
+        <div class="implanto-doctor-info">
+          <div class="implanto-doctor-nombre">Dra. María Abad</div>
+          <div class="implanto-doctor-titulo">Especialista en Odontopediatría</div>
+        </div>
+      </div>
+      <a href="#contacto" class="implanto-cta">Primera visita sin compromiso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+<section id="scanner-seccion" class="implanto-section" style="display:none;">
+  <div class="container">
+    <div class="implanto-header">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Tecnología digital</span></div>
+      <h2 class="section-title implanto-titulo">Vemos lo que<br><em>el ojo no ve.</em></h2>
+      <p class="implanto-lead">En ABAD trabajamos con tecnología de diagnóstico digital de última generación. Antes de tocar nada, sabemos exactamente qué hay que hacer.</p>
+    </div>
+    <div class="implanto-grid">
+      <div class="implanto-ilustracion">
+        <div class="implanto-svg-wrap"><svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" font-family="Jost,sans-serif">
+  <defs>
+    <linearGradient id="scanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4da8da" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#02548e" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4da8da" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M45,90 C45,62 83,40 160,40 C237,40 275,62 275,90 C275,112 256,129 234,135 C210,142 192,137 180,143 C170,149 166,160 160,160 C154,160 150,149 140,143 C128,137 110,142 86,135 C64,129 45,112 45,90 Z" fill="none" stroke="#02548e" stroke-width="2.5" opacity="0.6"/>
+  <rect x="104" y="95" width="22" height="26" rx="5" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="129" y="98" width="19" height="23" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="150" y="99" width="19" height="22" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="171" y="98" width="19" height="23" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="192" y="95" width="22" height="26" rx="5" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <path d="M95,95 Q160,87 223,95" fill="none" stroke="#ffb8b8" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <rect x="107" y="152" width="20" height="23" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="130" y="154" width="18" height="20" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="150" y="155" width="18" height="19" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="170" y="154" width="18" height="20" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <rect x="191" y="152" width="20" height="23" rx="4" fill="#e8f4fd" stroke="#02548e" stroke-width="1.5"/>
+  <path d="M98,155 Q160,163 222,155" fill="none" stroke="#ffb8b8" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <path d="M66,155 L76,185 C86,204 114,216 160,218 C206,216 234,204 244,185 L254,155" fill="none" stroke="#02548e" stroke-width="2.5" opacity="0.6"/>
+  <rect x="35" y="40" width="6" height="185" rx="3" fill="#02548e" opacity="0.95" class="scanner-beam"/>
+  <rect x="28" y="40" width="20" height="185" rx="6" fill="url(#scanGlow)" class="scanner-beam"/>
+  <text x="160" y="245" text-anchor="middle" font-size="11" fill="#02548e" font-weight="400" letter-spacing="1.5">DIAGNÓSTICO DIGITAL</text>
+</svg></div>
+      </div>
+      <div class="implanto-contenido">
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">01</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">Clínica 100% digitalizada</h3>
+            <p>Escáneres rápidos, precisos y con <strong>mínima radiación</strong>. Diagnóstico digital completo sin radiografías tradicionales.</p>
+          </div>
+        </div>
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">02</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">Diagnóstico en segundos</h3>
+            <p>Obtenemos una <strong>imagen completa y detallada</strong> de tu boca al instante para planificar con precisión.</p>
+          </div>
+        </div>
+        <div class="implanto-bloque">
+          <div class="implanto-bloque-num">03</div>
+          <div class="implanto-bloque-texto">
+            <h3 class="implanto-bloque-titulo">Mejor decisión</h3>
+            <p>Un buen diagnóstico digital es la diferencia entre un tratamiento planificado y uno que improvisa. <strong>Nunca empezamos sin saber a dónde vamos</strong>.</p>
+          </div>
+        </div></div>
+    </div>
+    <div class="implanto-separador">
+      <div class="implanto-separador-linea"></div>
+      <div class="implanto-separador-texto">Especialista responsable</div>
+      <div class="implanto-separador-linea"></div>
+    </div>
+    <div class="implanto-footer">
+      <div class="implanto-doctor">
+        <img src="/images/doctor-ivan.png" alt="Dr. Iván Arnáiz Abad" class="implanto-doctor-foto">
+        <div class="implanto-doctor-info">
+          <div class="implanto-doctor-nombre">Dr. Iván Arnáiz Abad</div>
+          <div class="implanto-doctor-titulo">Implantología · Escáner Digital · Invisalign</div>
+        </div>
+      </div>
+      <a href="#contacto" class="implanto-cta">Pedir diagnóstico digital <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>

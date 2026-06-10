@@ -119,10 +119,7 @@ const CF_POS = {
    '3': { tx:  750, ty: 55, tz: -340, ry: -52, scale: 0.62, opacity: 0.28, blur: 5 },
 };
 
-function cfGetTransform(cfg, flipped) {
-  const flipY = flipped ? 180 : 0;
-  return `translateX(${cfg.tx}px) translateY(${cfg.ty}px) translateZ(${cfg.tz}px) rotateY(${cfg.ry + flipY}deg) scale(${cfg.scale})`;
-}
+
 
 function cfRender() {
   const cards = document.querySelectorAll('.trat-card');
@@ -131,7 +128,6 @@ function cfRender() {
     const rel = i - cfIdx;
     const absRel = Math.max(-3, Math.min(3, rel));
     const cfg = CF_POS[String(absRel)];
-    const isFlipped = card.classList.contains('flipped');
 
     if (Math.abs(rel) > 3) {
       card.style.opacity = '0';
@@ -140,60 +136,72 @@ function cfRender() {
       return;
     }
 
-    card.style.transform = cfGetTransform(cfg, isFlipped && absRel === 0);
+    card.style.transform = cfGetTransform(cfg, false);
     card.style.opacity = cfg.opacity;
     card.style.filter  = cfg.blur > 0 ? `blur(${cfg.blur}px)` : 'none';
     card.style.zIndex  = String(10 - Math.abs(absRel));
     card.style.pointerEvents = Math.abs(absRel) <= 2 ? 'auto' : 'none';
 
     // Quitar flip a las no-centrales
-    if (absRel !== 0 && isFlipped) {
-      card.classList.remove('flipped');
-    }
   });
 }
 
 function cfMove(dir) {
   // Desflipear central
   const cards = document.querySelectorAll('.trat-card');
-  if (cards[cfIdx]) cards[cfIdx].classList.remove('flipped');
 
   cfIdx = Math.max(0, Math.min(cfIdx + dir, CF_TOTAL - 1));
   cfRender();
 }
 
-// Click
-document.addEventListener('click', function(e) {
-  const card = e.target.closest('.trat-card');
-  if (!card) return;
-
-  const cards = Array.from(document.querySelectorAll('.trat-card'));
-  const i = cards.indexOf(card);
-  const rel = i - cfIdx;
-
-  if (rel !== 0) {
-    // Mover al centro
-    cfMove(rel > 0 ? 1 : -1);
-    return;
-  }
-
-  // Flip real de la tarjeta central
-  const isFlipped = card.classList.contains('flipped');
-  card.classList.toggle('flipped');
-  const cfg = CF_POS['0'];
-  card.style.transform = cfGetTransform(cfg, !isFlipped);
-});
+// Click desactivado — acordeón exclusivo maneja la apertura
 
 // Scroll
-document.addEventListener('wheel', function(e) {
-  const wrap = document.getElementById('serviciosCoverflow');
-  if (!wrap) return;
-  const rect = wrap.getBoundingClientRect();
-  if (e.clientY < rect.top || e.clientY > rect.bottom) return;
-  e.preventDefault();
-  cfMove(e.deltaY > 0 ? 1 : -1);
-}, { passive: false });
+// Scroll desactivado
 
 // Init
+function cfGetTransform(cfg, flipped) {
+  const flipY = flipped ? 180 : 0;
+  return `translateX(${cfg.tx}px) translateY(${cfg.ty}px) translateZ(${cfg.tz}px) rotateY(${cfg.ry + flipY}deg) scale(${cfg.scale})`;
+}
 document.addEventListener('DOMContentLoaded', cfRender);
 setTimeout(cfRender, 150);
+
+
+
+
+
+
+
+/* ═══════════════════════════
+   ACORDEÓN EXCLUSIVO
+   ═══════════════════════════ */
+
+const SECCIONES_ACTIVAS = [
+  'implantologia',
+  'odontopediatria-seccion',
+  'scanner-seccion'
+];
+
+function abrirSeccion(seccionId, e) {
+  if (e) { e.preventDefault(); e.stopPropagation(); }
+
+  const objetivo = document.getElementById(seccionId);
+  if (!objetivo) return;
+
+  const yaAbierta = objetivo.style.display === 'block';
+
+  // Cerrar todas
+  SECCIONES_ACTIVAS.forEach(function(id) {
+    var sec = document.getElementById(id);
+    if (sec) sec.style.display = 'none';
+  });
+
+  // Si estaba cerrada, abrirla
+  if (!yaAbierta) {
+    objetivo.style.display = 'block';
+    setTimeout(function() {
+      objetivo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
+  }
+}
