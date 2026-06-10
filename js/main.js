@@ -164,6 +164,7 @@ function cfGetTransform(cfg, flipped) {
   const flipY = flipped ? 180 : 0;
   return `translateX(${cfg.tx}px) translateY(${cfg.ty}px) translateZ(${cfg.tz}px) rotateY(${cfg.ry + flipY}deg) scale(${cfg.scale})`;
 }
+
 document.addEventListener('DOMContentLoaded', cfRender);
 setTimeout(cfRender, 150);
 
@@ -207,6 +208,7 @@ function abrirSeccion(seccionId, e) {
     setTimeout(function() {
       objetivo.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 150);
+
   }
 }
 
@@ -227,3 +229,8 @@ document.addEventListener('click', function(e) {
     cfMove(rel > 0 ? 1 : -1);
   }
 });
+
+
+
+
+
