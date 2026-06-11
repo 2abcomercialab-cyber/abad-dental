@@ -622,13 +622,7 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
 }
 
 /* GRID */
-.implanto-grid {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 6rem;
-  align-items: start;
-  margin-bottom: 5rem;
-}
+
 
 /* ILUSTRACIÓN */
 .implanto-ilustracion {
@@ -859,7 +853,7 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
 
 @media (max-width: 1024px) {
   .implanto-section { padding: 5rem 2rem; }
-  .implanto-grid { grid-template-columns: 1fr; gap: 3rem; }
+  
   .implanto-ilustracion { position: static; }
   .implanto-footer { flex-direction: column; align-items: flex-start; }
   .implanto-cta { width: 100%; justify-content: center; }
@@ -1147,62 +1141,6 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
 
 
 
-/* ═══════════════════════════════════
-   IMPLANTE — Imagen real con etiquetas
-   ═══════════════════════════════════ */
-
-.implanto-img-real-wrap {
-  position: relative;
-  width: 300px;
-  flex-shrink: 0;
-}
-
-.implanto-foto-real {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-.implanto-etiquetas {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.implanto-etiq {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.implanto-etiq-texto {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 400;
-  color: var(--azul);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  background: rgba(255,255,255,0.9);
-  padding: 0.2rem 0.5rem;
-  border-radius: 2px;
-  border-left: 2px solid var(--azul);
-}
-
-.implanto-etiq-linea {
-  width: 30px;
-  height: 1px;
-  background: var(--azul);
-  opacity: 0.5;
-}
-
-/* Ajuste grid para imagen más ancha */
-.implanto-grid {
-  grid-template-columns: 300px 1fr !important;
-  gap: 4rem !important;
-}
 
 /* ═══════════════════════════════════
    ESCÁNER — Barra animada
@@ -1410,4 +1348,168 @@ footer { background: var(--texto); color: rgba(255,255,255,0.5); padding: 5rem; 
 @keyframes blancBrillo {
   0%,100% { opacity: 0.1; transform: scale(0.8); }
   50%      { opacity: 0.9; transform: scale(1.3); }
+}
+
+
+/* ═══════════════════════════════════
+   FIX GRID + IMÁGENES
+   ═══════════════════════════════════ */
+
+
+
+.implanto-ilustracion {
+  position: sticky;
+  top: 8rem;
+  width: 300px;
+}
+
+.implanto-img-real-wrap {
+  position: relative;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.implante-wrap {
+  overflow: visible;
+}
+
+.implanto-foto-real {
+  width: 300px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+  
+  .implanto-ilustracion {
+    position: static;
+    width: 100%;
+  }
+  .implanto-img-real-wrap,
+  .implanto-foto-real {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* ═══════════════════════════════════
+   ETIQUETAS IMPLANTE — fix posición
+   ═══════════════════════════════════ */
+
+.implante-wrap {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.implante-wrap .implanto-etiquetas {
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.implante-wrap .implanto-etiq {
+  position: absolute !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.implante-wrap .implanto-etiq-texto {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--azul);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: rgba(255,255,255,0.92);
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+  border-left: 2px solid var(--azul);
+}
+
+.implante-wrap .implanto-etiq-linea {
+  width: 24px;
+  height: 1px;
+  background: var(--azul);
+  opacity: 0.5;
+}
+
+.implante-wrap .implanto-foto-real {
+  width: 300px !important;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══ GRID IMPLANTO — definitivo ═══ */
+.implanto-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .implanto-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ═══ FORCE GRID ═══ */
+.implanto-section .implanto-grid {
+  display: grid !important;
+  grid-template-columns: 300px 1fr !important;
+  gap: 4rem !important;
+  align-items: start !important;
+  margin-bottom: 5rem !important;
+}
+
+.implanto-section .implanto-ilustracion {
+  display: block !important;
+  position: sticky !important;
+  top: 8rem !important;
+  width: 300px !important;
+}
+
+.implanto-section .implanto-ilustracion > div {
+  width: 300px !important;
+  max-width: 300px !important;
+}
+
+.implanto-section .implanto-ilustracion img {
+  width: 300px !important;
+  max-width: 300px !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* ═══ FIX IMAGEN IMPLANTE DESBORDADA ═══ */
+.implante-wrap {
+  width: 300px !important;
+  max-width: 300px !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.implante-wrap img {
+  width: 300px !important;
+  max-width: 300px !important;
+  height: auto !important;
+  display: block !important;
+}
+
+.implanto-ilustracion {
+  width: 300px !important;
+  max-width: 300px !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
 }
