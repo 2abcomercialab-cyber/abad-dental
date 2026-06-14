@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="description" content="Clínica Dental ABAD Burgos — Más de 30 años cuidando tu salud dental en Burgos. Implantología, Estética dental, Odontopediatría. C/ Vitoria 235, Burgos. Tel: 947 48 21 71">
 <meta name="keywords" content="dentista Burgos, implantes dentales Burgos, clínica dental Burgos, dentista niños Burgos">
 <title>Clínica Dental ABAD — Tu dentista de confianza en Burgos</title>
@@ -24,7 +24,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">ABAD</a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#equipo">Equipo</a></li>
     <li><a href="#tecnologia">Tecnología</a></li>
@@ -32,7 +32,22 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contacto" class="nav-cta"><span class="pulso-btn"></span>Pedir cita</a></li>
   </ul>
+  <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MENÚ MÓVIL OVERLAY — elemento independiente fuera del nav -->
+<div id="menuOverlay" class="menu-overlay" aria-hidden="true">
+  <ul class="menu-overlay-links">
+    <li><a href="#servicios" onclick="cerrarMenu()">Servicios</a></li>
+    <li><a href="#equipo" onclick="cerrarMenu()">Equipo</a></li>
+    <li><a href="#tecnologia" onclick="cerrarMenu()">Tecnología</a></li>
+    <li><a href="#confianza" onclick="cerrarMenu()">La Clínica</a></li>
+    <li><a href="#faq" onclick="cerrarMenu()">FAQ</a></li>
+    <li><a href="#contacto" onclick="cerrarMenu()" class="menu-overlay-cta">Pedir cita</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -564,7 +579,7 @@
     <div class="equipo-layout">
       <div class="equipo-intro reveal-left">
         <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Nuestro equipo</span></div>
-        <h2 class="section-title">Más de 30 años<br><em>al servicio</em><br>de Burgos</h2>
+        <h2 class="section-title">Más de 30 años <em>al servicio</em><br>de Burgos</h2>
         <p class="historia-texto">Desde 1993, la Clínica Dental ABAD es un referente de la salud bucodental en Burgos. Tres especialistas comprometidos con la atención más personalizada, cercana y de alta calidad técnica.</p>
       </div>
       <div class="equipo-grid">
@@ -606,19 +621,19 @@
     <div class="tech-carousel" id="carousel">
       <div class="carousel-track" id="carouselTrack">
         <div class="carousel-slide active">
-          <img src="/images/carousel-recepcion.png" alt="Recepción Clínica Dental ABAD">
+          <img src="/images/carousel-recepcion.png" alt="Recepción Clínica Dental ABAD" onclick="abrirLightbox(this.src, this.alt)" style="cursor:zoom-in">
           <div class="carousel-slide-label">Recepción</div>
         </div>
         <div class="carousel-slide">
-          <img src="/images/carousel-sala-espera.png" alt="Sala de espera">
+          <img src="/images/carousel-sala-espera.png" alt="Sala de espera" onclick="abrirLightbox(this.src, this.alt)" style="cursor:zoom-in">
           <div class="carousel-slide-label">Sala de espera</div>
         </div>
         <div class="carousel-slide">
-          <img src="/images/carousel-pasillo.png" alt="Pasillo interior">
+          <img src="/images/carousel-pasillo.png" alt="Pasillo interior" onclick="abrirLightbox(this.src, this.alt)" style="cursor:zoom-in">
           <div class="carousel-slide-label">Instalaciones</div>
         </div>
         <div class="carousel-slide">
-          <img src="/images/carousel-xmind.png" alt="Radiología digital">
+          <img src="/images/carousel-xmind.png" alt="Radiología digital" onclick="abrirLightbox(this.src, this.alt)" style="cursor:zoom-in">
           <div class="carousel-slide-label">Radiología digital</div>
         </div>
       </div>
@@ -630,7 +645,7 @@
     </div>
     <div class="tech-contenido reveal-right">
       <div class="section-eyebrow"><div class="eyebrow-line" style="background:rgba(255,255,255,0.3)"></div><span class="eyebrow-text" style="color:rgba(255,255,255,0.4)">Tecnología avanzada</span></div>
-      <h2 class="section-title" style="color:var(--blanco)">Diagnóstico de<br><em>precisión</em></h2>
+      <h2 class="section-title" style="color:var(--blanco)">Diagnóstico de <em>precisión</em></h2>
       <div class="tech-items">
         <div class="tech-item">
           <span class="tech-num">01</span>
@@ -690,7 +705,7 @@
 <section id="faq">
   <div class="container">
     <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Preguntas frecuentes</span></div>
-    <h2 class="section-title reveal">Resolvemos tus<br><em>dudas</em></h2>
+    <h2 class="section-title reveal">Resolvemos tus <em>dudas</em></h2>
     <div class="faq-grid">
       <div class="faq-item reveal" onclick="toggleFaq(this)">
         <div class="faq-question">¿Cuánto tiempo dura un implante dental?<div class="faq-icon"></div></div>
@@ -774,6 +789,12 @@
                 <button type="button" class="chip" onclick="seleccionarChip(this, 'Quiero llevar a mi hijo/a a una primera visita')">Para mi hijo/a</button>
               </div>
               <textarea id="mensajeTextarea" placeholder="O escribe aquí lo que necesites..."></textarea>
+            </div>
+            <div class="form-field form-check">
+              <label class="check-label">
+                <input type="checkbox" required>
+                <span>He leído y acepto la <a href="/politica-privacidad.html" target="_blank">Política de Privacidad</a></span>
+              </label>
             </div>
             <button type="submit" class="btn-cita-principal">
               <span class="btn-cita-pulso"></span>
@@ -908,10 +929,26 @@
   </div>
   <div class="footer-bottom">
     <span>© 2025 Clínica Dental ABAD · Burgos</span>
-    <span>Aviso legal · Política de privacidad</span>
+    <span><a href="/aviso-legal.html" style="color:inherit;text-decoration:none;opacity:.7">Aviso legal</a> · <a href="/politica-privacidad.html" style="color:inherit;text-decoration:none;opacity:.7">Política de privacidad</a> · <a href="/politica-cookies.html" style="color:inherit;text-decoration:none;opacity:.7">Política de cookies</a></span>
   </div>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="cerrarLightbox()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9998;cursor:zoom-out;align-items:center;justify-content:center;">
+  <button onclick="cerrarLightbox()" style="position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;z-index:1;">×</button>
+  <img id="lightboxImg" src="" alt="" style="max-width:95vw;max-height:90vh;object-fit:contain;border-radius:6px;">
+</div>
 <script src="/js/main.js"></script>
+
+<!-- BANNER COOKIES -->
+<div id="cookieBanner" class="cookie-banner" style="display:none">
+  <div class="cookie-banner-inner">
+    <p class="cookie-texto">Usamos cookies propias y de Google Analytics para mejorar tu experiencia. Puedes aceptarlas o rechazar las no esenciales. <a href="/politica-cookies.html">Más información</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-btn-rechazar" onclick="cookieRechazar()">Solo esenciales</button>
+      <button class="cookie-btn-aceptar" onclick="cookieAceptar()">Aceptar todas</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

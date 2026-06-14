@@ -275,3 +275,64 @@ document.addEventListener('click', function(e) {
 
 
 
+
+
+// ── BANNER COOKIES ──
+(function() {
+  if (!localStorage.getItem('abad_cookies_ok')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+})();
+
+function cookieAceptar() {
+  localStorage.setItem('abad_cookies_ok', 'all');
+  document.getElementById('cookieBanner').style.display = 'none';
+  // Aquí se activaría Google Analytics cuando esté configurado
+}
+
+function cookieRechazar() {
+  localStorage.setItem('abad_cookies_ok', 'essential');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+
+
+// ── MENÚ HAMBURGUESA ──
+function toggleMenu() {
+  const overlay = document.getElementById('menuOverlay');
+  const btn = document.getElementById('navHamburger');
+  const isOpen = overlay.classList.contains('open');
+  overlay.classList.toggle('open');
+  btn.classList.toggle('open');
+  overlay.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+  document.body.style.overflow = !isOpen ? 'hidden' : '';
+}
+
+function cerrarMenu() {
+  const overlay = document.getElementById('menuOverlay');
+  const btn = document.getElementById('navHamburger');
+  overlay.classList.remove('open');
+  btn.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+
+// ── LIGHTBOX FOTOS ──
+function abrirLightbox(src, alt) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightboxImg');
+  img.src = src;
+  img.alt = alt || '';
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Cerrar lightbox con Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') cerrarLightbox();
+});
