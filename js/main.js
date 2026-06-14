@@ -88,14 +88,44 @@ function toggleFaq(item){
 // ── FORM ──
 document.getElementById('citaForm').addEventListener('submit',function(e){
   e.preventDefault();
-  const btn=this.querySelector('.btn-form');
-  btn.innerHTML='✓ Solicitud recibida — Te llamaremos pronto';
-  btn.style.background='#1a6e3a';
-  setTimeout(()=>{
-    btn.innerHTML='Solicitar cita <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-    btn.style.background='';this.reset();
-  },4000);
+  const btn = this.querySelector('.btn-cita-principal');
+  btn.innerHTML = '✓ Solicitud recibida — Te llamaremos pronto';
+  btn.style.background = '#1a6e3a';
+  btn.style.animation = 'none';
+  setTimeout(() => {
+    btn.innerHTML = '<span class="btn-cita-pulso"></span>Solicitar cita <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:16px;height:16px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    btn.style.background = '';
+    btn.style.animation = '';
+    this.reset();
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('chip-active'));
+  }, 4000);
 });
+
+// ── CHIPS MENSAJE ──
+function seleccionarChip(chip, texto) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('chip-active'));
+  chip.classList.add('chip-active');
+  document.getElementById('mensajeTextarea').value = texto;
+}
+
+// ── SELECT → CHIP AUTO ──
+function sincronizarMensaje(val) {
+  const mapa = {
+    'primera':       'Primera visita, me gustaría que me revisen',
+    'implantes':     'Me gustaría saber si soy candidato/a para implantes',
+    'estetica':      'Me gustaría mejorar la estética de mi sonrisa',
+    'ninos':         'Quiero llevar a mi hijo/a a una primera visita',
+    'urgencia':      'Tengo dolor dental, necesito atención lo antes posible',
+    'blanqueamiento':'Me interesa el blanqueamiento dental',
+    'presupuesto':   'Quiero un presupuesto sin compromiso',
+    'otro':          ''
+  };
+  const textarea = document.getElementById('mensajeTextarea');
+  if (mapa[val] !== undefined) {
+    textarea.value = mapa[val];
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('chip-active'));
+  }
+}
 
 
 
@@ -213,12 +243,12 @@ function abrirSeccion(seccionId, e) {
 }
 
 
-// Click en tarjeta lateral → mover al centro
+// Click en tarjeta → mover al centro O abrir sección si ya está centrada
 document.addEventListener('click', function(e) {
   const card = e.target.closest('.trat-card');
   if (!card) return;
 
-  // Si el click fue en el botón Saber más, no hacer nada aquí
+  // Si el click fue en el botón Saber más, no interferir (ya tiene su onclick)
   if (e.target.closest('.trat-saber-mas')) return;
 
   const cards = Array.from(document.querySelectorAll('.trat-card'));
@@ -226,7 +256,18 @@ document.addEventListener('click', function(e) {
   const rel = i - cfIdx;
 
   if (rel !== 0) {
+    // Tarjeta lateral: moverla al centro
     cfMove(rel > 0 ? 1 : -1);
+  } else {
+    // Tarjeta central: abrir su sección directamente
+    const seccionId = card.dataset.id === 'radiologia' ? 'scanner-seccion'
+                    : card.dataset.id === 'odontopediatria' ? 'odontopediatria-seccion'
+                    : card.dataset.id === 'urgencias' ? 'urgencias-seccion'
+                    : card.dataset.id === 'estetica' ? 'estetica-seccion'
+                    : card.dataset.id === 'endodoncia' ? 'endodoncia-seccion'
+                    : card.dataset.id === 'blanqueamiento' ? 'blanqueamiento-seccion'
+                    : card.dataset.id; // implantologia
+    abrirSeccion(seccionId, e);
   }
 });
 
